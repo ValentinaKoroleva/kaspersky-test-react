@@ -1,0 +1,19 @@
+.card{
+    border:none
+}
+.card-header{
+    font-weight: bold;
+    text-align: left;
+    background-color: white;
+    align-content: center;
+    vertical-align:middle;
+}
+.card-body{
+    padding-left: 10%;
+}
+.container-fluid{
+    padding-left: 20%;
+    padding-right: 10%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+}

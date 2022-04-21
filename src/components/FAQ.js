@@ -3,7 +3,8 @@ import Accordion from "react-bootstrap/Accordion";
 import AccordionContext from "react-bootstrap/AccordionContext";
 import Card from "react-bootstrap/Card";
 import { useAccordionButton } from "react-bootstrap/AccordionButton";
-
+import { Container, Row, Col } from "react-bootstrap";
+import "./FAQ.css"
 function ContextAwareToggle({ children, eventKey, callback }) {
   const { activeEventKey } = useContext(AccordionContext);
 
@@ -15,21 +16,30 @@ function ContextAwareToggle({ children, eventKey, callback }) {
   const isCurrentEventKey = activeEventKey === eventKey;
   let iconSource = require("../assets/icons/minus.png");
   if (!isCurrentEventKey) iconSource = require("../assets/icons/plus.png");
+
   return (
-    <div>
-      <button
-        type="button"
-        style={{
-          boxShadow: "0px 2px 4px rgba(35, 209, 174, 0.24)",
-          borderRadius: "4px",
-          backgroundColor: isCurrentEventKey ? "#23D1AE" : "white",
-        }}
-        onClick={decoratedOnClick}
-      >
-        <img className="icon" src={iconSource} alt="opened" />
-      </button>
-      {children}
-    </div>
+    <Container>
+      <Row>
+        <Col xs={1}>
+          <button
+            type="button"
+            style={{
+              boxShadow: "0px 2px 4px rgba(35, 209, 174, 0.24)",
+              borderRadius: "4px",
+              border:"none",
+              backgroundColor: isCurrentEventKey ? "#23D1AE" : "white",
+              width: '36px', height: '36px',
+            }}
+            onClick={decoratedOnClick}
+          >
+            <img className="icon" src={iconSource} alt="opened" style={{ marginBottom: '10%' }} />
+          </button>
+        </Col>
+        <Col className="d-flex align-self-center">
+          {children}
+        </Col>
+      </Row>
+    </Container>
   );
 }
 
@@ -73,7 +83,7 @@ class FAQ extends Component {
         </Card>
         <Card>
           <Card.Header>
-            <ContextAwareToggle eventKey="3">Will I get the latest version?</ContextAwareToggle>
+            <ContextAwareToggle eventKey="3">How quickly can I start using the software?</ContextAwareToggle>
           </Card.Header>
           <Accordion.Collapse eventKey="3">
             <Card.Body>
@@ -85,7 +95,7 @@ class FAQ extends Component {
         </Card>
         <Card>
           <Card.Header>
-            <ContextAwareToggle eventKey="4">Will I get the latest version?</ContextAwareToggle>
+            <ContextAwareToggle eventKey="4">How do I download and install the software?</ContextAwareToggle>
           </Card.Header>
           <Accordion.Collapse eventKey="4">
             <Card.Body>
@@ -97,7 +107,7 @@ class FAQ extends Component {
         </Card>
         <Card>
           <Card.Header>
-            <ContextAwareToggle eventKey="5">Will I get the latest version?</ContextAwareToggle>
+            <ContextAwareToggle eventKey="5">What type of encryption is used in Kaspersky VPN?</ContextAwareToggle>
           </Card.Header>
           <Accordion.Collapse eventKey="5">
             <Card.Body>
@@ -109,7 +119,7 @@ class FAQ extends Component {
         </Card>
         <Card>
           <Card.Header>
-            <ContextAwareToggle eventKey="6">Will I get the latest version?</ContextAwareToggle>
+            <ContextAwareToggle eventKey="6">What server locations are offered by Kaspersky VPN?</ContextAwareToggle>
           </Card.Header>
           <Accordion.Collapse eventKey="6">
             <Card.Body>
@@ -121,7 +131,7 @@ class FAQ extends Component {
         </Card>
         <Card>
           <Card.Header>
-            <ContextAwareToggle eventKey="7">Will I get the latest version?</ContextAwareToggle>
+            <ContextAwareToggle eventKey="7">Lorem ipsum is placeholder text commonly used?</ContextAwareToggle>
           </Card.Header>
           <Accordion.Collapse eventKey="7">
             <Card.Body>
