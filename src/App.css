@@ -1,4 +1,129 @@
 .App {
   text-align: center;
-  font: 'Kaspersky Sans'
+  font: Kaspersky Sans;
+  font-size: 12px;
+}
+p{
+  text-align:left;
+}
+a{
+  color: #00A88E!important;
+
+}
+.col{
+  text-align:left;
+}
+.nav-pills {
+  border-bottom: none !important;
+  padding-left: 20%!important;
+  margin-top:10%;
+}
+
+.nav-item {
+  border-radius: 0% !important;
+  background-color: white !important;
+}
+
+.nav-pills  .nav-link {
+  color: #666666 !important;
+  width: 100%;
+  border: 1.5px solid #23D1AE !important;
+}
+
+
+.nav-item .nav-link.disabled{
+  align-self: left;
+  border: none!important;
+  font-weight: bolder;
+  font-size:240%;
+  color: black !important;
+  margin-right: 90px!important;
+  vertical-align: text-top;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 0;
+}
+.nav-pills .nav-link.active,
+.nav-pills .show>.nav-link {
+  background-color: #23D1AE !important;
+  border-radius: 0% !important;
+  color: white !important;
+
+}
+
+.nav-pills .nav-link {
+  border-radius: 0% !important;
+}
+
+.tab-content {
+  max-width: 85%;
+  align-items: left;
+  padding-left: 20%;
+  padding-right: 10%;
+  margin-bottom: 10%;
+  margin-top:2%;
+}
+
+.list-group-item{
+  text-align: left;
+  border: none!important;
+  color: #444444;
+}
+.checkpoint{
+  margin-right: 1%;
+}
+.check{
+  margin-right: 4%;
+  float:left;
+}
+.check-item{
+  padding: 0!important;
+}
+
+.offer{
+  box-shadow: 0px 8.48242px 25.4473px rgba(29, 29, 27, 0.24);
+  border-radius: 4.24121px;
+  overflow: auto;
+  height: 120%;
+  padding-left: 5%!important;
+}
+#dropdown-basic{
+  background-color: white;
+  color:#1D1D1B;
+  border-radius: 0;
+  border: 1.5px solid #CCCCCC;
+  border-bottom: 2px solid #23D1AE;
+  font-size: small;
+  width:100%;
+  justify-content: space-evenly;
+}
+.buy-button{
+   background: #FF3748;
+   color:white;
+   display: flex;
+   justify-content: center;
+   align-items:center;
+   font-weight: 700;
+   font-size: large;
+   width: 100%;
+   height: 25%;
+   box-shadow: 0px 8.48242px 33.9297px rgba(255, 55, 72, 0.48);
+   border-radius: 4.77136px;
+   border:none;
+  
+}
+.tag-best{
+  position: relative;
+  bottom: 40%;
+  right: 130%;
+}
+.tag-best ::before{
+  position: absolute;
+  top:80px;
+  right:15px
+}
+.tag-best ::after{
+  position: absolute;
+  top:80px;
+  right:15px
 }
